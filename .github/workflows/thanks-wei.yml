@@ -19,7 +19,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Try the Webhook with a capital I
       - name: Thank Wei for the retrospective reminder
         run: |
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" --data-urlencode 'content=Thank you for that reminder, ${{ secrets.WEI_DISCORD_ID }}! https://tenor.com/view/thanks-thank-you-glitter-confetti-gif-15745466'
-    
+      # Try again with an L this time
+      - name: Thank Wei for the retrospective reminder, with an L this time because fonts suck
+        run: |
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK_WITH_AN_L }}" --data-urlencode 'content=Thank you for that reminder, ${{ secrets.WEI_DISCORD_ID }}!! https://tenor.com/view/thanks-thank-you-glitter-confetti-gif-15745466'
+      # If neither worked, I'm just bad at this lmao
