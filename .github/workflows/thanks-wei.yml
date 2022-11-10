@@ -21,5 +21,5 @@ jobs:
     steps:
       - name: Thank Wei for the retrospective reminder
         run: |
-          curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" --data-urlencode '-content=Thank you for that reminder, ${{ secrets.WEI_DISCORD_ID }}! https://tenor.com/view/thanks-thank-you-glitter-confetti-gif-15745466'
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" --data-urlencode 'content=Thank you for that reminder, ${{ secrets.WEI_DISCORD_ID }}! https://tenor.com/view/thanks-thank-you-glitter-confetti-gif-15745466'
     
